@@ -10,7 +10,7 @@
   margin: 0 auto 4rem;
 }
 
-.pricing-header > span {
+.pricing-header>span {
   font: 600 .7rem "Instrument Sans", sans-serif;
   letter-spacing: .15em;
   color: var(--fg-muted);
@@ -34,7 +34,6 @@
 }
 
 
-/* TOGGLE */
 
 .pricing-toggle {
   display: inline-flex;
@@ -59,7 +58,6 @@
 }
 
 
-/* CARDS */
 
 .pricing-cards {
   display: grid;
@@ -79,7 +77,6 @@
 }
 
 
-/* YOUR THREE COLORS */
 
 .card-one {
   background: var(--card-1);
@@ -95,15 +92,11 @@
 }
 
 
-/* CARD HOVER */
-
 .pricing-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 50px rgba(0, 0, 0, .3);
 }
 
-
-/* CONTENT */
 
 .pricing-icon {
   display: block;
@@ -151,7 +144,7 @@
 .pricing-card hr {
   margin: 2rem 0;
   border: 0;
-  border-top: 1px solid rgba(255,255,255,.15);
+  border-top: 1px solid rgba(255, 255, 255, .15);
 }
 
 .pricing-card ul {
@@ -179,8 +172,6 @@
 }
 
 
-/* FOOTER */
-
 .pricing-footer {
   margin-top: 2.5rem;
   text-align: center;
@@ -194,7 +185,6 @@
 }
 
 
-/* MOBILE */
 
 @media (max-width: 800px) {
   .Pricing {
