@@ -1,0 +1,63 @@
+NOVA - AI Workspace Landing Page
+
+Project description
+
+NOVA is the landing page for a fictional AI-powered project and workflow management platform. It is a single-page website that highlights the product through the hero introduction, trusted-by section, scroll-triggered How It Works section, feature showcase carousel, testimonials, pricing plans, and a frequently asked questions section that ends with a call-to-action footer.
+
+The project is focused on UI design, interactive experiences, and motion design inspired by SaaS and AI product websites. The NOVA website is built without any frameworks.
+
+Technologies
+
+HTML5
+
+CSS3
+
+Vanilla JavaScript
+
+GSAP
+
+GSAP ScrollTrigger
+
+Lenis
+
+Google Fonts
+
+Instrument Sans
+
+Instrument Serif
+
+Features
+
+Responsive navigation bar with a mobile hamburger menu.
+
+Animated hero section with a full-width background image.
+
+Trusted-by logo marquee with a continuous scrolling animation.
+
+How It Works scroll-pinned section with three cards that resize, adjust spacing, and flip in 3D based on scroll position.
+
+GSAP ScrollTrigger animations with responsive behavior on different screen sizes.
+
+A responsive feature showcase carousel with previous/next buttons, keyboard arrow-key navigation, touch swipe support for mobile devices, and a progress indicator.
+
+Testimonials section presented in a responsive grid of cards with varying layouts.
+
+A three-tiered pricing section featuring the Starter, Pro, and Team plans.
+
+An expandable/collapsible FAQ accordion.
+
+Smooth scrolling implemented with Lenis.
+
+A responsive layout optimized for desktop, tablet, and mobile.
+
+Modular JavaScript architecture with ES modules.
+
+AI Tools
+
+AI tools were used throughout the development process as supplementary tools that assisted in specific areas of development, and not as a replacement for any of the development work done on the website.
+
+ChatGPT — was used for ideation and refinement of visual assets and images that were used throughout the website. Additionally, it was used for brainstorming and general advice when a creative edge was needed.
+
+Claude — was used as a development-focused assistant. It was used to find potential issues with the HTML, CSS, and JavaScript codebase, as well as suggest implementation and refactoring advice when necessary, and debug animation and interaction-related issues.
+
+The website’s structure, implementation, style, animation, and interactivity were done manually, and the use of AI was primarily for development assistance, debugging, and creative aid, rather than generating the code for the project.
