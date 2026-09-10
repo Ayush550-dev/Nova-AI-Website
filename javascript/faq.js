@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
     question.addEventListener("click", () => {
       const isOpen = item.classList.contains("open");
 
-      // Close all
       faqItems.forEach((otherItem) => {
         otherItem.classList.remove("open");
 
@@ -17,7 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
         otherQuestion.setAttribute("aria-expanded", "false");
       });
 
-      // Open clicked item
       if (!isOpen) {
         item.classList.add("open");
         question.setAttribute("aria-expanded", "true");
