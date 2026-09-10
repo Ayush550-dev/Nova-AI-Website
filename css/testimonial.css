@@ -1,0 +1,89 @@
+.testimonials {
+  padding: 8rem 6rem;
+  background: var(--bg);
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--fg);
+  margin-bottom: 4rem;
+}
+.testimonials h2 .dim { color: var(--fg-muted); }
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+.testimonial-card {
+  border-radius: var(--radius);
+  padding: 3rem 2.25rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 420px;   /* makes them noticeably taller */
+}
+
+/* Card 1 — light */
+.testimonial-card--light {
+  background: var(--card-1);
+  color: var(--bg);
+}
+.testimonial-card--light .quote { color: var(--bg); }
+.testimonial-card--light .name { color: var(--bg); }
+.testimonial-card--light .role { color: rgba(15,15,15,0.6); }
+
+/* Card 2 — red */
+.testimonial-card--red {
+  background: var(--card-2);
+  color: var(--fg);
+}
+.testimonial-card--red .quote { color: var(--fg); }
+.testimonial-card--red .name { color: var(--fg); }
+.testimonial-card--red .role { color: rgba(255,255,255,0.75); }
+
+/* Card 3 — dark */
+.testimonial-card--dark {
+  background: var(--card-3);
+  color: var(--fg);
+  border: 1px solid var(--border);
+}
+.testimonial-card--dark .quote { color: var(--fg); }
+.testimonial-card--dark .role { color: var(--fg-muted); }
+
+.quote {
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  margin-bottom: 2rem;
+}
+
+.author {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.author .name {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.author .role {
+  font-size: 0.85rem;
+}
+
+@media (max-width: 1000px) {
+  .testimonials { padding: 5rem 1.5rem; }
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+  .testimonial-card { min-height: unset; }
+}

@@ -1,0 +1,319 @@
+.showcase {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    padding: 9rem 2rem 8rem;
+    overflow: hidden;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.showcase-header {
+    max-width: 700px;
+    margin: 0 auto 5rem;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.showcase-label {
+    display: block;
+    margin-bottom: 1.5rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    color: var(--text-muted);
+}
+
+.showcase-header h2 {
+    font-family: "Instrument Serif", serif;
+    font-size: clamp(3.5rem, 7vw, 6.5rem);
+    font-weight: 400;
+    line-height: 0.95;
+    letter-spacing: -0.025em;
+}
+
+.showcase-header h2 em {
+    color: var(--accent);
+    font-style: italic;
+}
+
+.showcase-header p {
+    max-width: 480px;
+    margin: 1.8rem auto 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+}
+
+.showcase-carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 650px;
+    padding-bottom: 2rem;
+}
+
+.showcase-track {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 760px;
+    height: 100%;
+    perspective: 1200px;
+}
+
+.showcase-card {
+    position: absolute;
+    width: 700px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(0) scale(0.78);
+    transition: transform 0.7s cubic-bezier(.22, 1, .36, 1),
+                opacity 0.6s ease;
+    z-index: 1;
+}
+
+.showcase-card.is-active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0) scale(1);
+    z-index: 5;
+}
+
+.showcase-card.is-prev {
+    opacity: 0.42;
+    transform: translateX(-620px) scale(0.78);
+    z-index: 2;
+}
+
+.showcase-card.is-next {
+    opacity: 0.42;
+    transform: translateX(620px) scale(0.78);
+    z-index: 2;
+}
+
+.showcase-card.is-hidden-left {
+    opacity: 0;
+    transform: translateX(-1100px) scale(0.7);
+    z-index: 0;
+}
+
+.showcase-card.is-hidden-right {
+    opacity: 0;
+    transform: translateX(1100px) scale(0.7);
+    z-index: 0;
+}
+
+.showcase-img {
+    width: 100%;
+    height: 390px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    box-shadow: var(--shadow);
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.showcase-img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.showcase-card.is-active:hover .showcase-img {
+    border-color: var(--accent);
+}
+
+.showcase-card.is-active:hover .showcase-img img {
+    transform: scale(1.03);
+}
+
+
+.showcase-info {
+    padding: 1.4rem 0.3rem;
+}
+
+.showcase-number {
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+}
+
+.showcase-info h3 {
+    margin-top: 0.5rem;
+    font-family: "Instrument Serif", serif;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.showcase-info p {
+    max-width: 450px;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: var(--text-muted);
+}
+
+.carousel-btn {
+    position: absolute;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    background: var(--surface);
+    color: var(--text);
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.carousel-btn:hover {
+    transform: scale(1.08);
+    border-color: var(--accent);
+    background: var(--accent);
+}
+
+.carousel-btn span {
+    font-family: Arial, sans-serif;
+    font-size: 1.2rem;
+}
+
+.carousel-prev {
+    left: calc(50% - 470px);
+}
+
+.carousel-next {
+    right: calc(50% - 470px);
+}
+
+
+.showcase-progress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    font-size: 0.65rem;
+    color: var(--text-muted);
+}
+
+.progress-current {
+    color: var(--text);
+}
+
+.progress-bar {
+    position: relative;
+    width: 100px;
+    height: 1px;
+    background: var(--border);
+}
+
+.progress-bar span {
+    display: block;
+    width: 16.66%;
+    height: 1px;
+    background: var(--accent);
+    transition: width 0.5s ease;
+}
+
+
+@media (max-width: 1100px) {
+    .showcase-track {
+        width: 680px;
+    }
+
+    .showcase-card {
+        width: 620px;
+    }
+
+    .showcase-card.is-prev {
+        transform: translateX(-500px) scale(0.78);
+    }
+
+    .showcase-card.is-next {
+        transform: translateX(500px) scale(0.78);
+    }
+
+    .carousel-prev {
+        left: 2rem;
+    }
+
+    .carousel-next {
+        right: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .showcase {
+        padding: 6rem 0 5rem;
+    }
+
+    .showcase-header {
+        margin-bottom: 3rem;
+    }
+
+    .showcase-carousel {
+        height: auto;
+        padding: 0 1rem;
+    }
+
+    .showcase-track {
+        width: 100%;
+        height: auto;
+    }
+
+    .showcase-card,
+    .showcase-card.is-active,
+    .showcase-card.is-prev,
+    .showcase-card.is-next,
+    .showcase-card.is-hidden-left,
+    .showcase-card.is-hidden-right {
+        position: relative;
+        width: 100%;
+        opacity: 0;
+        transform: none;
+    }
+
+    .showcase-card.is-active {
+        opacity: 1;
+    }
+
+    .showcase-img {
+        height: 280px;
+    }
+
+    .carousel-btn {
+        top: 40%;
+        width: 44px;
+        height: 44px;
+    }
+
+    .carousel-prev {
+        left: 0.75rem;
+    }
+
+    .carousel-next {
+        right: 0.75rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .showcase-card,
+    .showcase-img,
+    .showcase-img img,
+    .carousel-btn,
+    .progress-bar span {
+        transition: none;
+    }
+}

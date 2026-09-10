@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap");
+
+:root {
+  --bg: #0f0f0f;
+  --fg: #fff;
+  --fg-muted: #a0a0a0;
+  --card-1: #b2b2b2;
+  --card-2: #ce2017;
+  --card-3: #2f2f2f;
+  --border: #262626;
+  --radius: 16px;
+  --text: var(--fg);
+  --text-muted: var(--fg-muted);
+  --accent: var(--card-2);
+  --surface: #171717;
+  --shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+  --transition: 0.3s ease;
+}
